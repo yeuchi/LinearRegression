@@ -16,6 +16,11 @@ This code is defined in Numerical Analysis text referenced below.
 ### Kotlin
 This is an exercise of mixing Kotlin with java while using data-binding.
 
+### NOTE
+This code base does not handle the following failure conditions.
+1. rotation - nothing has been implemented to preserve the points nor re-render.
+2. sorting - points are 'not' sorted; so touch screen (add points) from left -> right !
+
 ## References
 
 1. Numerical Analysis 5th edition by Burden 
