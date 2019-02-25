@@ -18,8 +18,9 @@ import java.util.List;
  */
 public class MyPaperView extends View
 {
-    private final int strokeColor = Color.BLACK;
-    private final int fillColor = Color.BLUE;
+    private final int regressionColor = Color.BLACK;
+    private final int dotColor = Color.BLUE;
+    private final int tangentColor = Color.YELLOW;
     // defines paint and canvas
     private Paint drawPaint;
     private Path path;
@@ -29,12 +30,20 @@ public class MyPaperView extends View
     public int width;
     public int height;
 
+    private Line mLineRegression;
+
+    public void setRegressionLine(MyPoint p0,
+                                  MyPoint p1)
+    {
+        this.mLineRegression = new Line(p0, p1);
+        render();
+    }
+
     public MyPaperView(Context context,
                        AttributeSet attrs) {
         super(context, attrs);
         setFocusable(true);
         setFocusableInTouchMode(true);
-       // setupPaint();
         path = new Path();
         points = new ArrayList<MyPoint>();
     }
@@ -52,23 +61,68 @@ public class MyPaperView extends View
     @Override
     protected void onDraw(Canvas canvas)
     {
-        // stroke style
+        drawRegressionLine(canvas);
+        drawTouchPoints(canvas);
+        //drawTangentLines(canvas);
+    }
+
+    /*
+     * Draw regression line
+     */
+    private void drawRegressionLine(Canvas canvas)
+    {
         drawPaint = new Paint();
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(5);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
-        drawPaint.setColor(strokeColor);
+        drawPaint.setColor(regressionColor);
         canvas.drawPath(path, drawPaint);
+    }
 
-        // fill style
+    /*
+     * Draw touch points
+     */
+    private void drawTouchPoints(Canvas canvas)
+    {
         Paint dotPaint = new Paint();
         dotPaint.setStyle(Paint.Style.FILL);
-        dotPaint.setColor(fillColor);
+        dotPaint.setColor(dotColor);
 
-        for (MyPoint p : points)
-            canvas.drawCircle((float)p.x, (float)p.y, 5, dotPaint);
+        for (MyPoint p : points) {
+            // highlight point
+            canvas.drawCircle((float) p.x, (float) p.y, 5, dotPaint);
+        }
+    }
+
+    /*
+     * Draw tangent lines
+     */
+    private void drawTangentLines(Canvas canvas)
+    {
+        drawPaint = new Paint();
+        drawPaint.setAntiAlias(true);
+        drawPaint.setStrokeWidth(3);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        drawPaint.setColor(tangentColor);
+
+        // Work in progress !!!
+
+        for (MyPoint p : points) {
+
+            Line line = mLineRegression.findNormalLineFrom(p);
+            MyPoint pp = mLineRegression.findIntersectionFrom(line);
+
+            if(null!= pp) {
+                Path tpath = new Path();
+                tpath.moveTo((float) p.x, (float) p.y);
+                tpath.lineTo((float) pp.x, (float) pp.y);
+                canvas.drawPath(tpath, drawPaint);
+            }
+        }
     }
 
     @Override
@@ -78,8 +132,7 @@ public class MyPaperView extends View
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
-    public boolean render(MyPoint p0,
-                          MyPoint p1)
+    protected boolean render()
     {
         path = new Path();
         if (null==points || points.size()<2)
@@ -88,8 +141,8 @@ public class MyPaperView extends View
         if(points.size() > 2)
         {
             // render regression line
-            path.moveTo((float)p0.x, (float)p0.y);
-            path.lineTo((float)p1.x, (float)p1.y);
+            path.moveTo((float)mLineRegression.p0.x, (float)mLineRegression.p0.y);
+            path.lineTo((float)mLineRegression.p1.x, (float)mLineRegression.p1.y);
         }
 
         postInvalidate(); // Indicate view should be redrawn
