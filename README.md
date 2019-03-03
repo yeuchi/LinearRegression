@@ -14,15 +14,24 @@ Find a common line by calculating the orthogonal projections of shortest total d
 This code is defined in Numerical Analysis text referenced below.
 
 ### Orthogonal lines
+Shortest distance from point to regression line is orthogonal.  To find their intersection point, we use the following steps.
+
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" title="m = \frac{(P1.y-P0.y))}{P1.x-P0.x}" /></a></em>
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=b&space;=&space;\frac{(P1.y-P0.y))}{P1.x-0}&space;=&space;P1.y&space;-&space;m*&space;P1.x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b&space;=&space;\frac{(P1.y-P0.y))}{P1.x-0}&space;=&space;P1.y&space;-&space;m*&space;P1.x" title="b = \frac{(P1.y-P0.y))}{P1.x-0} = P1.y - m* P1.x" /></a></em>
 
+
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=line1:&space;P0.y&space;=&space;m*P0.x&space;&plus;&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?line1:&space;P0.y&space;=&space;m*P0.x&space;&plus;&space;b" title="line1: P0.y = m*P0.x + b" /></a></em>
+
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Orthogonal&space;line:&space;P3.y&space;=&space;m'*P3.x&space;&plus;&space;b'" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Orthogonal&space;line:&space;P3.y&space;=&space;m'*P3.x&space;&plus;&space;b'" title="Orthogonal line: P3.y = m'*P3.x + b'" /></a></em>
 
+
+<em><a href="https://www.codecogs.com/eqnedit.php?latex=m'&space;=&space;\frac{1}{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m'&space;=&space;\frac{1}{m}" title="m' = \frac{1}{m}" /></a></em>
+
+
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Intersection&space;point.x&space;=&space;\frac{(b-b'))}{m'-m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Intersection&space;point.x&space;=&space;\frac{(b-b'))}{m'-m}" title="Intersection point.x = \frac{(b-b'))}{m'-m}" /></a></em>
+
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Intersection&space;point.y&space;=&space;mx&plus;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Intersection&space;point.y&space;=&space;mx&plus;b" title="Intersection point.y = mx+b" /></a></em>
 
