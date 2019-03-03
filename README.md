@@ -13,6 +13,9 @@ Using paint class to render touch point and regression line (more than 2 points)
 Find a common line by calculating the orthogonal projections of shortest total distance.
 This code is defined in Numerical Analysis text referenced below.
 
+<em><a href="https://www.codecogs.com/eqnedit.php?latex=least&space;squares:&space;\sum_{10}^{i=1}y_{i}&space;-(ax_{i}&space;&plus;&space;b)])^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?least&space;squares:&space;\sum_{10}^{i=1}y_{i}&space;-(ax_{i}&space;&plus;&space;b)])^{2}" title="least squares: \sum_{10}^{i=1}y_{i} -(ax_{i} + b)])^{2}" /></a></em>
+
+
 ### Orthogonal lines
 Shortest distance from point to regression line is orthogonal.  We can find their intersection with the following slope-intercept formulas.
 
