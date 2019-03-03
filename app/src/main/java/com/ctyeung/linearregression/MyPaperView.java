@@ -20,7 +20,7 @@ public class MyPaperView extends View
 {
     private final int regressionColor = Color.BLACK;
     private final int dotColor = Color.BLUE;
-    private final int tangentColor = Color.YELLOW;
+    private final int tangentColor = Color.GREEN;
     // defines paint and canvas
     private Paint drawPaint;
     private Path path;
@@ -63,7 +63,7 @@ public class MyPaperView extends View
     {
         drawRegressionLine(canvas);
         drawTouchPoints(canvas);
-        //drawTangentLines(canvas);
+        drawTangentLines(canvas);
     }
 
     /*
@@ -108,8 +108,6 @@ public class MyPaperView extends View
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
         drawPaint.setColor(tangentColor);
-
-        // Work in progress !!!
 
         for (MyPoint p : points) {
 

@@ -83,9 +83,14 @@ public class Line {
         else {
             double m = this.getSlope();
             double b = this.getYIntercept();
-            double x = (b - line.getYIntercept()) / (m - line.getSlope());
+            double x = (line.getYIntercept() - b) / (m - line.getSlope());
             double y = findY(x);
             return new MyPoint(x, y);
+
+            /*
+             * alternative method
+             * https://math.stackexchange.com/questions/27388/intersection-of-2-lines-in-2d-via-general-form-linear-equations
+             */
         }
     }
 
@@ -154,7 +159,7 @@ public class Line {
             if(m==Double.NaN)
                 return Double.NaN;
 
-            double x = p1.x - p1.y / m;
+            double x = p1.y - p1.x * m;
             return x;
         }
     }
