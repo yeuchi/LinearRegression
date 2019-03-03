@@ -7,8 +7,8 @@ This is an exercise of the following skills.
 
 ### Path/Line
 Using paint class to render touch point and regression line (more than 2 points)
-<img width="400" src="https://user-images.githubusercontent.com/1282659/53699207-6c77c000-3dab-11e9-8740-ed8db2cc91eb.png">
-
+<img width="500" src="https://user-images.githubusercontent.com/1282659/53699644-4bfe3480-3db0-11e9-9af4-aadac3cf6510.png">
+ 
 ### Least squares approximation
 Find a common line by calculating the orthogonal projections of shortest total distance.
 This code is defined in Numerical Analysis text referenced below.
