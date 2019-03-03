@@ -14,7 +14,7 @@ Find a common line by calculating the orthogonal projections of shortest total d
 This code is defined in Numerical Analysis text referenced below.
 
 ### Orthogonal lines
-Shortest distance from point to regression line is orthogonal.  To find their intersection point, we use the following steps.
+Shortest distance from point to regression line is orthogonal.  We can find their intersection with the following slope-intercept formulas.
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" title="m = \frac{(P1.y-P0.y))}{P1.x-P0.x}" /></a></em>
 
