@@ -17,6 +17,8 @@ This code is defined in Numerical Analysis text referenced below.
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=a=\frac{m(\sum_{i-1}^{m}x_{i}y_{i})-(\sum_{i-1}^{m}x_{i})(\sum_{i-1}^{m}y_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a=\frac{m(\sum_{i-1}^{m}x_{i}y_{i})-(\sum_{i-1}^{m}x_{i})(\sum_{i-1}^{m}y_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" title="a=\frac{m(\sum_{i-1}^{m}x_{i}y_{i})-(\sum_{i-1}^{m}x_{i})(\sum_{i-1}^{m}y_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" /></a></em>
 
+<em><a href="https://www.codecogs.com/eqnedit.php?latex=b=\frac{m(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b=\frac{m(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" title="b=\frac{m(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" /></a></em>
+
 ### Orthogonal lines
 Shortest distance from point to regression line is orthogonal.  We can find their intersection with the following slope-intercept formulas.
 
