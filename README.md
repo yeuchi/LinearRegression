@@ -2,6 +2,7 @@
 This is an exercise of the following skills.
 - Kotlin/java mix 
 - Least squares approximation (linear regression) 
+- Line intersection
 - JetPack databinding
 - Path/Line drawing 
 
@@ -10,8 +11,7 @@ Using paint class to render touch point and regression line (more than 2 points)
 <img width="500" src="https://user-images.githubusercontent.com/1282659/53699693-c038d800-3db0-11e9-9fe2-217c47332fb6.png">
 
 ### Least squares approximation
-Find a common line by calculating the orthogonal projections of shortest total distance.
-This code is defined in Numerical Analysis text referenced below.
+We determine the line that best approximate the data points with least error.  This code is defined in chapter 8.1 of Numerical Analysis text referenced below.
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=least&space;squares:&space;\sum_{10}^{i=1}y_{i}&space;-(ax_{i}&space;&plus;&space;b)])^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?least&space;squares:&space;\sum_{10}^{i=1}y_{i}&space;-(ax_{i}&space;&plus;&space;b)])^{2}" title="least squares: \sum_{10}^{i=1}y_{i} -(ax_{i} + b)])^{2}" /></a></em>
 
