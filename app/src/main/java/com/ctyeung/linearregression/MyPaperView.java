@@ -10,6 +10,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /*
@@ -55,6 +57,7 @@ public class MyPaperView extends View
 
     public List<MyPoint> getPoints()
     {
+        Collections.sort(points, MyPoint.Comparators.CompareX);
         return points;
     }
 

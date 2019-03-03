@@ -44,11 +44,6 @@
                     android:onClick="@{() -> listener.onClickButtonClear()}"
                     android:text="delete"/>
 
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_gravity="center"
-                      android:text="portrait mode only !"/>
-
         </LinearLayout>
 
     </android.support.design.widget.CoordinatorLayout>
