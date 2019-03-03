@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), PaperEvent
 
             if (points.size > 2) {
                 var pair: android.util.Pair<MyPoint, MyPoint> = LinearRegression.findLeastSquare(points,
-                                                                                                0.0,
+                                                                                                points[0].x,
                                                                                                 points.get(points.size - 1).x)
                 p0 = pair.first;
                 p1 = pair.second;
