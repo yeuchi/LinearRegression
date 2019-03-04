@@ -33,7 +33,7 @@ Shortest distance from point to regression line is orthogonal.  We can find thei
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Orthogonal&space;line:&space;P3.y&space;=&space;m'*P3.x&space;&plus;&space;b'" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Orthogonal&space;line:&space;P3.y&space;=&space;m'*P3.x&space;&plus;&space;b'" title="Orthogonal line: P3.y = m'*P3.x + b'" /></a></em>
 
 
-<em><a href="https://www.codecogs.com/eqnedit.php?latex=m'&space;=&space;\frac{1}{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m'&space;=&space;\frac{1}{m}" title="m' = \frac{1}{m}" /></a></em>
+<em><a href="https://www.codecogs.com/eqnedit.php?latex=m'&space;=&space;-&space;\frac{1}{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m'&space;=&space;-&space;\frac{1}{m}" title="m' = - \frac{1}{m}" /></a></em>
 
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Intersection&space;point.x&space;=&space;\frac{(b-b'))}{m'-m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Intersection&space;point.x&space;=&space;\frac{(b-b'))}{m'-m}" title="Intersection point.x = \frac{(b-b'))}{m'-m}" /></a></em>
