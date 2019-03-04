@@ -56,4 +56,5 @@ This code base does not handle the following failure conditions.
     
 2. Exercise demo in Adobe Flex
    http://www.ctyeung.com/flex/math/linearRegression/linearRegression.html
+   
 
