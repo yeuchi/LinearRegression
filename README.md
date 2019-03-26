@@ -20,7 +20,7 @@ We determine the line that best approximate the data points with least error.  T
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" title="b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" /></a></em>
 
 ### Orthogonal lines
-Shortest distance from point to regression line is orthogonal.  We can find their intersection with the following slope-intercept formulas.
+The shortest distance from point to a line is always orthogonal.  We can find each intersection with the following slope-intercept formulas.
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" title="m = \frac{(P1.y-P0.y))}{P1.x-P0.x}" /></a></em>
 
