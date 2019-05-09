@@ -1,7 +1,6 @@
 # LinearRegression
 This is an exercise of the following skills.
-- Kotlin
-- convert from java mix 
+- Kotlin (previous some java mix) 
 - Least squares approximation (linear regression) 
 - Line intersection
 - JetPack databinding
@@ -43,7 +42,7 @@ The shortest distance from point to a line is always orthogonal.  We can find ea
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Intersection&space;point.y&space;=&space;mx&plus;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Intersection&space;point.y&space;=&space;mx&plus;b" title="Intersection point.y = mx+b" /></a></em>
 
 ### Kotlin
-This is an exercise of mixing Kotlin with java while using data-binding.
+This is a Kotlin exercise (with some previous java classes) and using data-binding.
 
 ### NOTE
 This code base does not handle the following failure conditions.
