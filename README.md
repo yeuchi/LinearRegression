@@ -20,7 +20,7 @@ We determine the line that best approximate the data points with least error.  T
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" title="b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" /></a></em>
 
 ### Orthogonal lines
-Shortest distance from point to regression line is orthogonal.  We can find their intersection with the following slope-intercept formulas.
+The shortest distance from point to a line is always orthogonal.  We can find each intersection with the following slope-intercept formulas.
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m&space;=&space;\frac{(P1.y-P0.y))}{P1.x-P0.x}" title="m = \frac{(P1.y-P0.y))}{P1.x-P0.x}" /></a></em>
 
@@ -33,7 +33,7 @@ Shortest distance from point to regression line is orthogonal.  We can find thei
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Orthogonal&space;line:&space;P3.y&space;=&space;m'*P3.x&space;&plus;&space;b'" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Orthogonal&space;line:&space;P3.y&space;=&space;m'*P3.x&space;&plus;&space;b'" title="Orthogonal line: P3.y = m'*P3.x + b'" /></a></em>
 
 
-<em><a href="https://www.codecogs.com/eqnedit.php?latex=m'&space;=&space;\frac{1}{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m'&space;=&space;\frac{1}{m}" title="m' = \frac{1}{m}" /></a></em>
+<em><a href="https://www.codecogs.com/eqnedit.php?latex=m'&space;=&space;-1*&space;\frac{1}{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m'&space;=&space;-1*&space;\frac{1}{m}" title="m' = -1*\frac{1}{m}" /></a></em>
 
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=Intersection&space;point.x&space;=&space;\frac{(b-b'))}{m'-m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Intersection&space;point.x&space;=&space;\frac{(b-b'))}{m'-m}" title="Intersection point.x = \frac{(b-b'))}{m'-m}" /></a></em>
@@ -56,4 +56,5 @@ This code base does not handle the following failure conditions.
     
 2. Exercise demo in Adobe Flex
    http://www.ctyeung.com/flex/math/linearRegression/linearRegression.html
+   
 
