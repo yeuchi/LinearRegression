@@ -1,6 +1,7 @@
 # LinearRegression
 This is an exercise of the following skills.
-- Kotlin/java mix 
+- Kotlin
+- convert from java mix 
 - Least squares approximation (linear regression) 
 - Line intersection
 - JetPack databinding
