@@ -15,9 +15,7 @@ We determine the line that best approximate the data points with least error.  T
 
 <em><a href="https://www.codecogs.com/eqnedit.php?latex=least&space;squares:&space;\sum_{10}^{i=1}y_{i}&space;-(ax_{i}&space;&plus;&space;b)])^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?least&space;squares:&space;\sum_{10}^{i=1}y_{i}&space;-(ax_{i}&space;&plus;&space;b)])^{2}" title="least squares: \sum_{10}^{i=1}y_{i} -(ax_{i} + b)])^{2}" /></a></em>
 
-<em><a href="https://www.codecogs.com/eqnedit.php?latex=b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" title="b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" /></a></em>
-
-<em><a href="https://www.codecogs.com/eqnedit.php?latex=b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" title="b=\frac{(\sum_{i-1}^{m}x_{i}^2)(\sum_{i-1}^{m}y_{i})-(\sum_{i-1}^{m}x_{i}y_{i})(\sum_{i-1}^{m}x_{i})}{m(\sum_{i-1}^{m}x_{i}^{2})-(\sum_{i-1}^{m}x_{i})^{2}}" /></a></em>
+<img width="397" alt="Screen Shot 2020-03-31 at 1 27 22 AM" src="https://user-images.githubusercontent.com/1282659/77998772-d7693280-72ee-11ea-9f64-48b0fee3f999.png">
 
 ### Orthogonal lines
 The shortest distance from point to a line is always orthogonal.  We can find each intersection with the following slope-intercept formulas.
