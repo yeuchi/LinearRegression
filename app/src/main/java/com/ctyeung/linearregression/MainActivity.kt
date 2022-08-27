@@ -1,13 +1,11 @@
 package com.ctyeung.linearregression
 
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.ctyeung.linearregression.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
 
 /*
@@ -15,8 +13,9 @@ import java.util.ArrayList
  */
 class MainActivity : AppCompatActivity(), PaperEvent
 {
-    internal var mBinding: ActivityMainBinding?=null
-    internal var mPaper:MyPaperView?=null
+    // var mBinding: ActivityMainBinding?=null
+    lateinit var mBinding: ActivityMainBinding
+    lateinit var mPaper:MyPaperView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,8 +60,8 @@ class MainActivity : AppCompatActivity(), PaperEvent
 
             if (points.size > 2) {
                 val (a, b) = LinearRegression.findLeastSquare(points,
-                                                            points[0].x,
-                                                            points.get(points.size - 1).x)
+                    points[0].x,
+                    points.get(points.size - 1).x)
                 p0 = a;
                 p1 = b;
             }

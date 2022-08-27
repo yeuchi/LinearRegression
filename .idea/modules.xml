@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android.LinearRegression.iml" filepath="$PROJECT_DIR$/.idea/modules/Android.LinearRegression.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinearRegression.iml" filepath="$PROJECT_DIR$/LinearRegression.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinearRegression.app.unitTest.iml" />
     </modules>
   </component>
 </project>
