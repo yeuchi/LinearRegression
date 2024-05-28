@@ -40,6 +40,13 @@ open class MainViewModel @Inject constructor() : ViewModel() {
             _event.emit(MainViewEvent.invalidated)
         }
     }
+
+    fun deleteAll() {
+        viewModelScope.launch(IO) {
+            points.clear()
+            _event.emit(MainViewEvent.invalidated)
+        }
+    }
 }
 
 sealed class MainViewEvent() {

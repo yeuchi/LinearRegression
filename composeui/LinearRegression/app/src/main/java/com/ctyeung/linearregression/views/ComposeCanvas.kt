@@ -35,23 +35,39 @@ fun ComposeCanvas(viewModel: MainViewModel) {
         Canvas(
             modifier = Modifier.fillMaxSize()
         ) {
-            val trianglePath = if (points.size > 1) {
-                Path().let { path ->
-                    path.moveTo(points[0].x, points[0].y)
-                    for (i in 1 until points.size) {
-                        points[i].let {
-                            path.lineTo(it.x, it.y)
-                        }
+            val trianglePath = when (points.size) {
+
+                0,1 -> {
+                    Path().let {
+                        it.moveTo(this.size.width * .20f, this.size.height * .77f)
+                        it.lineTo(this.size.width * .20f, this.size.height * 0.95f)
+                        it.lineTo(this.size.width * .37f, this.size.height * 0.86f)
+                        it.close()
+                        it
                     }
-                    path
                 }
-            } else {
-                Path().let {
-                    it.moveTo(this.size.width * .20f, this.size.height * .77f)
-                    it.lineTo(this.size.width * .20f, this.size.height * 0.95f)
-                    it.lineTo(this.size.width * .37f, this.size.height * 0.86f)
-                    it.close()
-                    it
+
+                //1 -> {}
+
+                2 -> {
+                    Path().let { path ->
+                        path.moveTo(points[0].x, points[0].y)
+                        path.lineTo(points[1].x, points[1].y)
+                        path
+                    }
+                }
+
+                else -> {
+                    val (a, b) = LinearRegression.findLeastSquare(
+                        points,
+                        points[0].x,
+                        points[points.size - 1].x
+                    )
+                    Path().let { path ->
+                        path.moveTo(a.x, a.y)
+                        path.lineTo(b.x, b.y)
+                        path
+                    }
                 }
             }
 
@@ -64,3 +80,4 @@ fun ComposeCanvas(viewModel: MainViewModel) {
         }
     }
 }
+
