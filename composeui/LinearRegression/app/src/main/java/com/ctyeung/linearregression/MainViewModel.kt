@@ -3,23 +3,30 @@ package com.ctyeung.linearregression
 import android.graphics.PointF
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.drawscope.CanvasDrawScope
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor() : ViewModel() {
+open class MainViewModel @Inject constructor() : ViewModel() {
 
-    init {
+    val points = arrayListOf<PointF>()
+    private val _event = MutableSharedFlow<MainViewEvent>()
+    val event: SharedFlow<MainViewEvent> = _event
 
-    }
-
-    fun select(p:PointF) {
+    fun select(p: PointF) {
 
     }
 
@@ -27,24 +34,14 @@ class MainViewModel @Inject constructor() : ViewModel() {
 
     }
 
-    fun save(p:PointF) {
-
-    }
-
-    fun render(drawScope: DrawScope) {
-        val trianglePath = Path().let {
-            it.moveTo(drawScope.size.width * .20f, drawScope.size.height * .77f)
-            it.lineTo(drawScope.size.width * .20f, drawScope.size.height * 0.95f)
-            it.lineTo(drawScope.size.width * .37f, drawScope.size.height * 0.86f)
-            it.close()
-            it
+    fun save(p: PointF) {
+        viewModelScope.launch(IO) {
+            points.add(p)
+            _event.emit(MainViewEvent.invalidated)
         }
-
-        val colors = listOf(Color(0xFF02b8f9), Color(0xFF0277fe))
-        drawScope.drawPath(
-            path = trianglePath,
-            Brush.verticalGradient(colors = colors),
-            style = Stroke(width = 15f, cap = StrokeCap.Round)
-        )
     }
+}
+
+sealed class MainViewEvent() {
+    object invalidated : MainViewEvent()
 }
