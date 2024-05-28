@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
@@ -35,6 +36,9 @@ fun ComposeCanvas(viewModel: MainViewModel) {
         Canvas(
             modifier = Modifier.fillMaxSize()
         ) {
+            /**
+             * Draw regression line
+             */
             val trianglePath = when (points.size) {
 
                 0,1 -> {
@@ -71,12 +75,20 @@ fun ComposeCanvas(viewModel: MainViewModel) {
                 }
             }
 
-            val colors = listOf(Color(0xFF02b8f9), Color(0xFF0277fe))
+            val colors = listOf(Color.Green, Color(0xFF0277fe))
             this.drawPath(
                 path = trianglePath,
                 Brush.verticalGradient(colors = colors),
                 style = Stroke(width = 15f, cap = StrokeCap.Round)
             )
+
+            /**
+             * Draw selected points
+             */
+
+            points.forEach {
+                drawCircle(Color.Blue, radius = 20F, center = Offset(it.x, it.y))
+            }
         }
     }
 }
