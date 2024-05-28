@@ -21,6 +21,7 @@ import com.ctyeung.linearregression.MainViewModel
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun ComposeCanvas(viewModel: MainViewModel) {
+    var regressionLine: Line? = null
     viewModel.apply {
         Box(modifier = Modifier
             .fillMaxSize()
@@ -39,9 +40,10 @@ fun ComposeCanvas(viewModel: MainViewModel) {
             /**
              * Draw regression line
              */
+            regressionLine = null
             val trianglePath = when (points.size) {
 
-                0,1 -> {
+                0, 1 -> {
                     Path().let {
                         it.moveTo(this.size.width * .20f, this.size.height * .77f)
                         it.lineTo(this.size.width * .20f, this.size.height * 0.95f)
@@ -67,6 +69,7 @@ fun ComposeCanvas(viewModel: MainViewModel) {
                         points[0].x,
                         points[points.size - 1].x
                     )
+                    regressionLine = Line(a, b)
                     Path().let { path ->
                         path.moveTo(a.x, a.y)
                         path.lineTo(b.x, b.y)
@@ -88,6 +91,29 @@ fun ComposeCanvas(viewModel: MainViewModel) {
 
             points.forEach {
                 drawCircle(Color.Blue, radius = 20F, center = Offset(it.x, it.y))
+            }
+
+            /**
+             * Draw tangent lines
+             */
+
+            regressionLine?.let { line ->
+                points.forEach { p ->
+                    val tangent = line.findNormalLineFrom(p)
+                    val pp = line.findIntersectionFrom(tangent)
+                    pp?.let {
+                        Path().let { path ->
+                            path.moveTo(p.x, p.y)
+                            path.lineTo(pp.x, pp.y)
+
+                            this.drawPath(
+                                path = path,
+                                Brush.verticalGradient(colors = listOf(Color.DarkGray, Color.DarkGray)),
+                                style = Stroke(width = 15f, cap = StrokeCap.Round)
+                            )
+                        }
+                    }
+                }
             }
         }
     }

@@ -72,7 +72,7 @@ open class Line {
     /*
      * Find tangent line input point
      */
-    open fun findNormalLineFrom(p: PointF): Line {
+    fun findNormalLineFrom(p: PointF): Line {
         // if vertical line
         return if (isVertical) {
             Line(p, PointF(p0.x, p.y))
