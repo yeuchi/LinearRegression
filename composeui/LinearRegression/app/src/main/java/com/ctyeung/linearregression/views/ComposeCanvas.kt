@@ -40,6 +40,7 @@ fun ComposeCanvas(viewModel: MainViewModel) {
              * Draw regression line
              */
             regressionLine = null
+            val points = getPoints()
             val trianglePath = when (points.size) {
 
                 0, 1 -> {
@@ -107,7 +108,12 @@ fun ComposeCanvas(viewModel: MainViewModel) {
 
                             this.drawPath(
                                 path = path,
-                                Brush.verticalGradient(colors = listOf(Color.DarkGray, Color.DarkGray)),
+                                Brush.verticalGradient(
+                                    colors = listOf(
+                                        Color.DarkGray,
+                                        Color.DarkGray
+                                    )
+                                ),
                                 style = Stroke(width = 5f, cap = StrokeCap.Round)
                             )
                         }

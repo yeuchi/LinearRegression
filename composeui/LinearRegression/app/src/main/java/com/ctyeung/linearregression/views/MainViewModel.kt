@@ -13,9 +13,14 @@ import javax.inject.Inject
 @HiltViewModel
 open class MainViewModel @Inject constructor() : ViewModel() {
 
-    val points = arrayListOf<PointF>()
+    private val points = arrayListOf<PointF>()
     private val _event = MutableSharedFlow<MainViewEvent>()
     val event: SharedFlow<MainViewEvent> = _event
+
+
+    fun getPoints():List<PointF> {
+        return points.sortedWith(Comparators.CompareX)
+    }
 
     fun select(p: PointF) {
 
