@@ -1,10 +1,10 @@
 # LinearRegression
 This is an exercise of the following skills.
+- ComposeUI vs xml Layout
 - Kotlin (previous some java mix) 
 - Least squares approximation (linear regression) 
 - Line intersection
-- JetPack databinding
-- Path/Line drawing 
+- Canvas/Path/Line drawing 
 
 ### Path/Line
 Using paint class to render touch point and regression line (more than 2 points)
@@ -46,6 +46,11 @@ This is a Kotlin exercise (with some previous java classes) and using data-bindi
 This code base does not handle the following failure conditions.
 1. rotation - nothing has been implemented to preserve the points nor re-render.
 2. sorting - points are 'not' sorted; so touch screen (add points) from left -> right !
+
+### Android Studio
+Iguana 2023.2.1 Patch 2 April 3, 2024
+
+<img width="500" src="https://github.com/yeuchi/LinearRegression/assets/1282659/4faf30c4-4425-4201-846b-b5bd32c9fc42"/>
 
 ## References
 
