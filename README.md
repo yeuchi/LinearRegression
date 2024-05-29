@@ -4,8 +4,7 @@ This is an exercise of the following skills.
 - Kotlin (previous some java mix) 
 - Least squares approximation (linear regression) 
 - Line intersection
-- JetPack databinding
-- Path/Line drawing 
+- Canvas/Path/Line drawing 
 
 ### Path/Line
 Using paint class to render touch point and regression line (more than 2 points)
