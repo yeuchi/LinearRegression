@@ -1,4 +1,4 @@
-package com.ctyeung.linearregression
+package com.ctyeung.linearregression.views
 
 interface PaperEvent {
     fun onActionUp()

@@ -1,14 +1,16 @@
-package com.ctyeung.linearregression
+package com.ctyeung.linearregression.views
+
+import android.graphics.PointF
 
 open class Line {
 
-    var p0: MyPoint
-    var p1: MyPoint
+    var p0: PointF
+    var p1: PointF
 
     /*
      * default constructor
      */
-    constructor(p0: MyPoint, p1: MyPoint) {
+    constructor(p0: PointF, p1: PointF) {
         this.p0 = p0
         this.p1 = p1
     }
@@ -16,16 +18,16 @@ open class Line {
     /*
      * construct from 1 point and slope
      */
-    constructor(p0: MyPoint, slope: Double) {
+    constructor(p0: PointF, slope: Float) {
         this.p0 = p0
 
         // horionzontal line
-        if (0.0 == slope) {
-            this.p1 = MyPoint(p0.x + 5, p0.y)
+        if (0F == slope) {
+            this.p1 = PointF(p0.x + 5, p0.y)
         } else {
             // default as yIntercept
             val y = p0.y - slope * p0.x
-            this.p1 = MyPoint(0.0, y)
+            this.p1 = PointF(0F, y)
         }
     }
 
@@ -33,9 +35,9 @@ open class Line {
      * Find slope of this line
      * return: Double.NAN if vertical
      */
-    open val slope: Double
+    open val slope: Float
         get() = if (isVertical) {
-            java.lang.Double.NaN
+            java.lang.Float.NaN
         } else (p1.y - p0.y) / (p1.x - p0.x)
 
     /*
@@ -44,13 +46,13 @@ open class Line {
      *
      * return: x if line is not vertical or horizontal
      */
-    open val yIntercept: Double
+    open val yIntercept: Float
         get() {
             if (isHorizontal) {
-                return java.lang.Double.NaN
+                return java.lang.Float.NaN
             } else {
                 val m = slope
-                return if (m == java.lang.Double.NaN) java.lang.Double.NaN else p1.y - p1.x * m
+                return if (m == java.lang.Float.NaN) java.lang.Float.NaN else p1.y - p1.x * m
 
             }
         }
@@ -70,12 +72,12 @@ open class Line {
     /*
      * Find tangent line input point
      */
-    open fun findNormalLineFrom(p: MyPoint): Line {
+    fun findNormalLineFrom(p: PointF): Line {
         // if vertical line
         return if (isVertical) {
-            Line(p, MyPoint(p0.x, p.y))
+            Line(p, PointF(p0.x, p.y))
         } else if (isHorizontal) {
-            Line(p, MyPoint(p.x, p0.y))
+            Line(p, PointF(p.x, p0.y))
         } else {
             // slope is inverse of this line
             Line(p, -1 / slope)
@@ -86,7 +88,7 @@ open class Line {
     /*
      * Find intersection point from a given line
      */
-    open fun findIntersectionFrom(line: Line): MyPoint? {
+    open fun findIntersectionFrom(line: Line): PointF? {
         // parallel lines
         if (this.isVertical && line.isVertical || this.isHorizontal && line.isHorizontal)
             return null
@@ -94,17 +96,17 @@ open class Line {
         if (isVertical) {
             val x = this.p0.x
             val y = line.findY(x)
-            return MyPoint(x, y)
+            return PointF(x, y)
         } else if (isHorizontal) {
             val y = this.p0.y
             val x = line.findX(y)
-            return MyPoint(x, y)
+            return PointF(x, y)
         } else {
             val m = this.slope
             val b = this.yIntercept
             val x = (line.yIntercept - b) / (m - line.slope)
             val y = findY(x)
-            return MyPoint(x, y)
+            return PointF(x, y)
 
             /*
              * alternative method
@@ -113,9 +115,9 @@ open class Line {
         }
     }
 
-    open fun findY(x: Double): Double {
+    open fun findY(x: Float): Float {
         return if (isVertical) {
-            java.lang.Double.NaN
+            java.lang.Float.NaN
         } else if (isHorizontal) {
             p0.y
         } else {
@@ -124,9 +126,9 @@ open class Line {
         }
     }
 
-    open fun findX(y: Double): Double {
+    open fun findX(y: Float): Float {
         return if (isVertical) {
-            java.lang.Double.NaN
+            Float.NaN
         } else if (isHorizontal) {
             p0.x
         } else {

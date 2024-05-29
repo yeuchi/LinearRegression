@@ -1,17 +1,14 @@
-package com.ctyeung.linearregression
+package com.ctyeung.linearregression.views
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
+import android.graphics.PointF
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-
-import java.util.ArrayList
-import java.util.Collections
-import java.util.Comparator
 
 /*
  * view to render points and lines
@@ -19,23 +16,23 @@ import java.util.Comparator
  */
 class MyPaperView(  context: Context,
                     attrs: AttributeSet) :
-                    View(context, attrs) {
+    View(context, attrs) {
 
-     val regressionColor = Color.BLACK
-     val dotColor = Color.BLUE
-     val tangentColor = Color.GREEN
+    val regressionColor = Color.BLACK
+    val dotColor = Color.BLUE
+    val tangentColor = Color.GREEN
 
     // defines paint and canvas
     var drawPaint: Paint? = null
     var path: Path? = null
-    var listPoints: MutableList<MyPoint>? = null
+    var listPoints: MutableList<PointF>? = null
     var mListener: PaperEvent? = null
 
     private var mLineRegression: Line? = null
 
     fun setRegressionLine(
-        p0: MyPoint,
-        p1: MyPoint
+        p0: PointF,
+        p1: PointF
     ) {
         this.mLineRegression = Line(p0, p1)
         render()
@@ -52,8 +49,8 @@ class MyPaperView(  context: Context,
         mListener = listener
     }
 
-    open fun getPoints(): List<MyPoint> {
-        var points:List<MyPoint> = listPoints!!.sortedWith(MyPoint.Comparators.CompareX)
+    fun getPoints(): List<PointF> {
+        val points:List<PointF> = listPoints!!.sortedWith(Comparators.CompareX)
         return points;
     }
 
@@ -145,7 +142,7 @@ class MyPaperView(  context: Context,
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
-        val point = MyPoint(event.x.toDouble(), event.y.toDouble())
+        val point = PointF(event.x, event.y)
 
         // Checks for the event that occurs
         when (event.action) {
