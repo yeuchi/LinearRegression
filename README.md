@@ -61,3 +61,4 @@ Iguana 2023.2.1 Patch 2 April 3, 2024
    http://www.ctyeung.com/flex/math/linearRegression/linearRegression.html
    
 
+<video width="420" src="https://github.com/yeuchi/LinearRegression/assets/1282659/3dc8e4ad-82ed-4ce7-aa0c-60b0046de86e"/>
