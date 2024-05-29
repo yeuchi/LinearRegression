@@ -14,6 +14,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
 import com.ctyeung.linearregression.ui.theme.LinearRegressionTheme
 import com.ctyeung.linearregression.views.ComposeCanvas
+import com.ctyeung.linearregression.views.MainViewEvent
+import com.ctyeung.linearregression.views.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

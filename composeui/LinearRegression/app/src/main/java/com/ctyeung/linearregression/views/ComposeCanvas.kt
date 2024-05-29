@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInteropFilter
-import com.ctyeung.linearregression.MainViewModel
 
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -82,7 +81,7 @@ fun ComposeCanvas(viewModel: MainViewModel) {
             this.drawPath(
                 path = trianglePath,
                 Brush.verticalGradient(colors = colors),
-                style = Stroke(width = 15f, cap = StrokeCap.Round)
+                style = Stroke(width = 5f, cap = StrokeCap.Round)
             )
 
             /**
@@ -109,7 +108,7 @@ fun ComposeCanvas(viewModel: MainViewModel) {
                             this.drawPath(
                                 path = path,
                                 Brush.verticalGradient(colors = listOf(Color.DarkGray, Color.DarkGray)),
-                                style = Stroke(width = 15f, cap = StrokeCap.Round)
+                                style = Stroke(width = 5f, cap = StrokeCap.Round)
                             )
                         }
                     }
