@@ -48,9 +48,11 @@ This code base does not handle the following failure conditions.
 2. sorting - points are 'not' sorted; so touch screen (add points) from left -> right !
 
 ### Android Studio
-Iguana 2023.2.1 Patch 2 April 3, 2024
-
+Iguana 2023.2.1 Patch 2 April 3, 2024\
 <img width="500" src="https://github.com/yeuchi/LinearRegression/assets/1282659/4faf30c4-4425-4201-846b-b5bd32c9fc42"/>
+
+### Test Device
+Google Pixel6a 
 
 ## References
 
